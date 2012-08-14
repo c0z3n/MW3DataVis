@@ -3,6 +3,8 @@ MW3DataVis
 
 ### c0z3n 2012, GPL v3 ###
 
+![data visualization for the MW3 map "Dome"](http://i.imgur.com/rdzOz.png)
+
 the MW3DataVis project is a collection of basic tools used to visualize data collected from MW3 gameplay.
 
 The purpose of this project is not to provide a suite of polished software, but rather just simple fuctionality for viewing and exporting .kdt files
