@@ -1,3 +1,16 @@
+
+#=================================================================#
+#  killnode.py - by c0z3n                                         #
+#                                                                 #
+#  a simple structire to manage killnodes as stored in .kdt       #
+#  pickles, with utilities for drawing to screen and identifying  #
+#  associated points.                                             #
+#                                                                 #
+#  requires pygame, www.pygame.org                                #
+#                                                                 #
+#=================================================================#
+
+
 import math
 import pygame
 

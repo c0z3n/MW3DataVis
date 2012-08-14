@@ -3,7 +3,7 @@
 #  jsonExporter.py - by c0z3n.                                    #
 #                                                                 #
 #  A simple tool to export MW3 killdata tables from               #  
-#  .kdt pickled data files to json objects, to use with the       # 
+#  .kdt pickled data files to json object files, to use with the  # 
 #  online webGL viewer at http://c0z3n.org/mapping                #
 #                                                                 #
 #=================================================================#
@@ -20,7 +20,7 @@ if not os.path.exists(r"jsonkdt"):
             
 for n in filenames:
     json_file = "jsonkdt\\" + n.lower() +".json"
-    filename = "..\\" + n + ".kdt"
+    filename = "data\\" + n + ".kdt"
     try:
         killdata_table = cPickle.load(open(filename, "rb"))
         export_list = []

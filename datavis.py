@@ -1,3 +1,17 @@
+
+#=================================================================#
+#  datavis.py - by c0z3n                                          #
+#                                                                 #
+#  a simple 3d viewer for MW3 killdata in .kdt pickle files.      #
+#  click a point to view associated points (recorded kill paths)  #
+#  point color tone varies by elevation, lower = darker.          #
+#  use keys 'a', 's', 'q', 'w', 'z', and 'x' to rotate view       #
+#  on each axis, and the arrow keys to translate the model.       #
+#                                                                 #
+#  requires pygame (www.pygame.org)                               #
+#                                                                 #
+#=================================================================#
+
 import sys, math, pygame
 import os.path
 import cPickle as pickle
@@ -5,7 +19,7 @@ from collections import defaultdict
 from pygame import K_UP, K_DOWN, K_LEFT, K_RIGHT, K_a, K_s, K_q, K_w, K_z, K_x
 from killnode import KillNode
 
-class Simulation:
+class Scene:
     def __init__(self, win_width = 640, win_height = 480):
         self.width = win_width
         self.height = win_height
@@ -27,7 +41,7 @@ class Simulation:
         valid_filename = False
         while not valid_filename:
             self.filename = raw_input("Map Name:")
-            self.filename = "..\\" + self.filename + ".kdt"
+            self.filename = "data\\" + self.filename + ".kdt"
             if os.path.isfile(r"%s" %self.filename):
                 valid_filename = True
                 
@@ -157,4 +171,4 @@ class Simulation:
             pygame.display.flip()
 
 if __name__ == "__main__":
-    Simulation().run()
+    Scene().run()
